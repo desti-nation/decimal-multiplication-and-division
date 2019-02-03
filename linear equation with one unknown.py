@@ -41,7 +41,7 @@ count = 1
 
 for i in range(1, num + 1):
 
-    if (i - 1) % 10 == 0:
+    if (i - 1) % 5 == 0:
         result.append("=========={:04d}==========".format(count))
         count += 1
 
@@ -53,7 +53,7 @@ for i in range(1, num + 1):
         c = get_num(min = int(max(a, b)))
         first = "{}{}".format(a, "x" if random.random() < 0.5 else "")
         if not "x" in first:
-            second = "{}".format(b)
+            second = "{}{}".format(b, "x")
         else:
             second = "{}{}".format(b, "x" if random.random() < 0.5 else "")
         r = "{} + {} = {}".format(first, second, c)
@@ -62,7 +62,7 @@ for i in range(1, num + 1):
         c = get_num(max=int(min(a, b)))
         first = "{}{}".format(a, "x" if random.random() < 0.5 else "")
         if not "x" in first:
-            second = "{}".format(b)
+            second = "{}{}".format(b, "x")
         else:
             second = "{}{}".format(b, "x" if random.random() < 0.5 else "")
         r = "{} - {} = {}".format(first, second, c)
